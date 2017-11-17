@@ -22,6 +22,9 @@ my_app.controller("EventController", function($scope, $http){
 			}
 		);
 	}
+	$scope.home = function(){
+		window.location.href="index.html";
+	}
 
 	$scope.reply = function(){
 		info = {"body": $scope.body, "postId": 1}

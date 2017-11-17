@@ -5,52 +5,135 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet">
+	    <link rel="stylesheet" href="main.css">   
+    	<link rel="stylesheet" href="build.css">   
+	    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet"> 
+    	<link rel="stylesheet" href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css">
 	</head>
-	<body>
+	<body style="background-color: #e0e0e0">
 	<application ng-app="my-app" ng-controller="MainController">
-		<div class="container">
-		<div class="row">
-		<div class="col-md-6">
-            <input type="text" ng-model="organiser" />
-            <button ng-click="filter()">Search</button>
-            <button ng-click="discard()">Discard</button><br>
-            <button ng-click="addEvent()">Add Event</button><br>
-        </div>
-		</div>
-		<div ng-repeat="event in filterEvents" ng-if="filterEvents.length">
+		<nav class="nav navbar-fixed-top">
+      		<div class="container-fluid">
+        		<ul class="pull-left in">
+		         	 <li ng-click="home()"><h3><img src="logo.png" alt="logo">&emsp;Online Event Management System</h3></li>
+		        </ul>
+		        <ul class="pull-right in">
+		          	<li ng-click="addEvent()"><h3>	Add Event</h3></li>
+		        </ul>
+		        <ul class="pull-right in">
+		        	<li ng-click="addEvent()">&emsp;&emsp;</li>	
+		        </ul>
+		        <ul class="pull-right in">
+		         	<li ng-click="home()"><h3>All Events</h3></li>
+		        </ul>
+		    </div>
+    	</nav>
+
+		<br><br><br><br><br><br>
+
 		<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-11">
-				<div ng-click="getEvent(event.id)">
-					<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="container-fluid">
+						<div class="form-group row">
+							<div class="col-md-4">
+					            <input class="form-control" id="search" type="text" placeholder="Type here" ng-model="organiser" />
+					        </div>
+							<div class="col-md-4">
+					            <input class="form-control btn-primary btn" id="submit" ng-click="filter()" value="Search"/>
+					        </div>
+							<div class="col-md-4">
+					            <input class="form-control btn-primary btn" id="submit" ng-click="discard()" value="Discard"/>
+					        </div>
+				        </div>
+					    <input class="form-control btn-primary btn" id="submit" ng-click="addEvent()" value="Add Event"/>
+					</div>
+
+					<br><br>
+
+					<div class="container" ng-repeat="event in filterEvents" ng-if="filterEvents.length">
+						<div class="row" style="border: 1px solid #ccc; background-color: #fff">
+							<div class="col-md-2">
+                				<img src="event.png">
+                			</div>
+							<div class="col-md-7">
+								<br>
+								<div>
+									<span class="title">{{event.title}}</span>
+								</div>
+								Organizer: {{event.organiser}}<br>
+								Date: {{event.date}}<br>
+								<div ng-if="event.hasOwnProperty('myCustomProperty')">Speciality: {{event.myCustomProperty}}</div>
+								<br>
+							</div>
+							<div class="col-md-3">
+								<br>
+				                Price: &#x20b9; {{event.price}} <br/><br/>
+				                <a class="btn btn-primary" ng-click="getEvent(event.id)">See Event</a><br/>
+							</div>
+						</div>
+						<hr>
+					</div>
+
+					<div class="container" ng-repeat="event in events" ng-if="events.length">
+						<div class="row" style="border: 1px solid #ccc; background-color: #fff">
+							<div class="col-md-2">
+                				<img src="event.png">
+                			</div>
+							<div class="col-md-7">
+								<br>
+								<div>
+									<span class="title">{{event.title}}</span>
+								</div>
+								Organizer: {{event.organiser}}<br>
+								Date: {{event.date}}<br>
+								<div ng-if="event.hasOwnProperty('myCustomProperty')">Speciality: {{event.myCustomProperty}}</div>
+								<br>
+							</div>
+							<div class="col-md-3">
+								<br>
+				                Price: &#x20b9; {{event.price}} <br/><br/>
+				                <a class="btn btn-primary" ng-click="getEvent(event.id)">See Event</a><br/>
+							</div>
+						</div>
+						<br>
+					</div>
 				</div>
-				<br>
-				<span>&emsp;<p ng-if="event.organiser.length" style="margin-left: 10px"><b><i>by {{event.organiser}}</i></b></p></span>
-			<br>
+			</div>
+			<div class="container-fluid">
+				<div class="form-group row">
+					<div class="col-md-1"></div>
+					<div class="col-md-4">
+						<input class="form-control btn-primary btn" id="submit" ng-click="next()" value="Next"/>
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-4">
+						<input class="form-control btn-primary btn" id="submit" ng-click="back()" ng-if="data>1" value="Back"/>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
-		<hr>
-		</div>
-		<div ng-repeat="event in events" ng-if="events.length">
-		<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-11">
-				<div ng-click="getEvent(event.id)">
-					<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
-				</div>
-				<br>
-				<span>&emsp;<p ng-if="event.organiser.length" style="margin-left: 10px"><b><i>by {{event.organiser}}</i></b></p></span>
-			<br>
-			</div>
-		</div>
-		</div>
-		<hr>
-		</div>
-		<button ng-click="next()">Next</button>
-		<button ng-click="back()" ng-if="data>10" style="text-right">Back</button>
+
+		<br><br><br>
+		
+		<footer class="fot">
+	      <div class="container-fluid">
+	        <br>
+	        <ul class="pull-left in">
+	          <li><a>&#169; Copyright (2017) Online Event Management System. All rights reserved.</a></li>
+	        </ul>
+	        <ul class="pull-right in">
+	          <li><a href="#">Terms of Service</a></li>
+	          <li><a href="#">Privacy Policy</a></li>
+	          <li><a href="#">Legal</a>&emsp;&emsp;</li>
+	        </ul>
+	        <br><br><br>
+	      </div>
+	    </footer>
+		
 	</application>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>

@@ -1,6 +1,6 @@
 var my_app = angular.module("my-app",[])
 my_app.controller("PostController", function($scope, $http){
-	$scope.user = {title: "Title", date: "November 16, 2017", organiser: "organiser 4", myCustomProperty: "myCustomProperty", price: 1201}
+	$scope.user = {}
 	var url = "http://eventmanager-server.herokuapp.com/events";
 	var data;
 	
@@ -8,6 +8,9 @@ my_app.controller("PostController", function($scope, $http){
 		console.log(id);
 		sessionStorage.setItem('id', id);
 		window.location.href="individual.html";
+	}
+	$scope.home = function(){
+		window.location.href="index.html";
 	}
 
 	$scope.postEvent = function(){

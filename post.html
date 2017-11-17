@@ -2,25 +2,78 @@
 <html>
 	<head>
 		<meta charset = "utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    	<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet">
+	    <link rel="stylesheet" href="main.css">   
+    	<link rel="stylesheet" href="build.css">   
+	    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet"> 
+    	<link rel="stylesheet" href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css">
 	</head>
-	<body>
+	<body style="background-color: #e0e0e0">
 		<application ng-app="my-app" ng-controller="PostController">
-			<h3>Enter Details</h3>
-			<br>
-			<form novalidate>
-    			Title:<br>
-    			<input type="text" class="form-control" ng-model="user.title"><br>
-    			Organiser:<br>
-    			<input type="text" class="form-control" ng-model="user.organiser"><br>
-    			Custom Property (Optional):<br>
-    			<input type="text" class="form-control" ng-model="user.myCustomProperty"><br>
-    			price:<br>
-    			<input type="number" class="form-control" ng-model="user.price"><br>
-    			Date:<br>
-    			<input type="text" class="form-control" ng-model="user.date"><br>
-    			<br><br>
-    			<button class="btn btn-primary"  ng-click="postEvent()">Submit</button>
-			</form>
+			<nav class="nav navbar-fixed-top">
+	      		<div class="container-fluid">
+	        		<ul class="pull-left in">
+			         	 <li ng-click="home()"><h3><img src="logo.png" alt="logo">&emsp;Online Event Management System</h3></li>
+			        </ul>
+			        <ul class="pull-right in">
+			          	<li ng-click="addEvent()"><h3>	Add Event</h3></li>
+			        </ul>
+			        <ul class="pull-right in">
+			        	<li ng-click="addEvent()">&emsp;&emsp;</li>	
+			        </ul>
+			        <ul class="pull-right in">
+			         	<li ng-click="home()"><h3>All Events</h3></li>
+			        </ul>
+			    </div>
+    		</nav>
+
+			<br><br><br><br><br><br>
+
+		
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8" style="border: 1px solid #ccc; background-color: #fff">
+						<h2>Add Event</h2>
+						<br>
+						<div class="form-group">
+							<label class="control-label">Title:</label><br>
+							<input type="text" class="form-control" ng-model="user.title" placeholder="Title"><br>
+							<label class="control-label">Organiser:</label><br>
+							<input type="text" class="form-control" ng-model="user.organiser" placeholder="Name"><br>
+							<label class="control-label">Custom Property (Optional):</label><br>
+							<input type="text" class="form-control" ng-model="user.myCustomProperty" placeholder="Property"><br>
+							<label class="control-label">Price:</label><br>
+							<input type="number" class="form-control" ng-model="user.price" placeholder=0><br>
+							<label class="control-label">Date:</label><br>
+							<input type="text" class="form-control" ng-model="user.date" placeholder="Month Day, Year"><br>
+							<br><br>
+							<button class="btn btn-primary"  ng-click="postEvent()">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br><br><br>
+		
+			<footer class="fot">
+		      <div class="container-fluid">
+		        <br>
+		        <ul class="pull-left in">
+		          <li><a>&#169; Copyright (2017) Online Event Management System. All rights reserved.</a></li>
+		        </ul>
+		        <ul class="pull-right in">
+		          <li><a href="#">Terms of Service</a></li>
+		          <li><a href="#">Privacy Policy</a></li>
+		          <li><a href="#">Legal</a>&emsp;&emsp;</li>
+		        </ul>
+		        <br><br><br>
+		      </div>
+		    </footer>
 		</application>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="post.js"></script>

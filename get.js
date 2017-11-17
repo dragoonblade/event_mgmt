@@ -40,6 +40,9 @@ my_app.controller("MainController", function($scope, $http){
 		sessionStorage.setItem('id', id);
 		window.location.href="individual.html";
 	}
+	$scope.home = function(){
+		window.location.href="index.html";
+	}
 
 	$scope.addEvent = function(){
 		window.location.href="post.html";
