@@ -49,7 +49,7 @@
 								</div>
 								Organizer: {{event.organiser}}<br>
 								Date: {{event.date}}<br>
-								<div ng-if="event.hasOwnProperty('myCustomProperty')">Speciality: {{event.myCustomProperty}}</div>
+								<div ng-if="event.myCustomProperty.length > 0">Speciality: {{event.myCustomProperty}}</div>
 								<br>
 							</div>
 							<div class="col-md-3">
@@ -68,8 +68,11 @@
 								<div class="container-fluid">
 									<div class="row">
 										<div class="col-sm-1"></div>
-										<div class="col-sm-10">
+										<div class="col-sm-8">
 											{{comment.body}}
+										</div>
+										<div class="col-sm-3">
+											{{comment.createdAt}}
 										</div>
 									</div>
 								</div>

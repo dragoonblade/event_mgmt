@@ -19,7 +19,7 @@ my_app.controller("PostController", function($scope, $http){
 		$scope.organiser=$scope.user.organiser;
 		$scope.myCustomProperty=$scope.user.myCustomProperty;
 		$scope.price=$scope.user.price;
-		if ($scope.myCustomProperty.lenght > 0)
+		if ($scope.myCustomProperty.length > 0)
 			data = { "title": $scope.title, "date": $scope.date, "organiser": $scope.organiser, "myCustomProperty": $scope.myCustomProperty, "price": $scope.price }
 		else
 			data = { "title": $scope.title, "date": $scope.date, "organiser": $scope.organiser, "price": $scope.price }

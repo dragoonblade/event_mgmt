@@ -36,8 +36,9 @@ my_app.controller("MainController", function($scope, $http){
 			});
 	}
 	$scope.getEvent = function(id){
+		$scope.id = id
 		console.log(id);
-		sessionStorage.setItem('id', id);
+		sessionStorage.setItem('id', $scope.id);
 		window.location.href="individual.html";
 	}
 	$scope.home = function(){

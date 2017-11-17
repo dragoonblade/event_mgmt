@@ -36,7 +36,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-1"></div>
-				<div class="col-md-10">
+				<div class="col-md-11">
 					<div class="container-fluid">
 						<div class="form-group row">
 							<div class="col-md-4">
@@ -46,10 +46,9 @@
 					            <input class="form-control btn-primary btn" id="submit" ng-click="filter()" value="Search"/>
 					        </div>
 							<div class="col-md-4">
-					            <input class="form-control btn-primary btn" id="submit" ng-click="discard()" value="Discard"/>
+					            <input class="form-control btn-danger btn" id="submit" ng-click="discard()" value="Discard Filter"/>
 					        </div>
 				        </div>
-					    <input class="form-control btn-primary btn" id="submit" ng-click="addEvent()" value="Add Event"/>
 					</div>
 
 					<br><br>
@@ -104,21 +103,27 @@
 				</div>
 			</div>
 			<div class="container-fluid">
-				<div class="form-group row">
+				<div class="row">
 					<div class="col-md-1"></div>
-					<div class="col-md-4">
-						<input class="form-control btn-primary btn" id="submit" ng-click="next()" value="Next"/>
-					</div>
-					<div class="col-md-3"></div>
-					<div class="col-md-4">
-						<input class="form-control btn-primary btn" id="submit" ng-click="back()" ng-if="data>1" value="Back"/>
+					<div class="col-md-11">
+						<div class="form-group row">
+							<div class="col-md-4">
+								<input class="form-control btn-primary btn" id="submit" ng-click="next()" value="Next"/>
+							</div>
+							<div class="col-md-4">
+							    <input class="form-control btn-success btn" id="submit" ng-click="addEvent()" value="Add Event"/>
+							</div>
+							<div class="col-md-4">
+								<input class="form-control btn-primary btn" id="submit" ng-click="back()" ng-if="data>1" value="Back"/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<br><br><br>
-		
+
 		<footer class="fot">
 	      <div class="container-fluid">
 	        <br>
