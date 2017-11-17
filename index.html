@@ -12,8 +12,9 @@
 		<div class="row">
 		<div class="col-md-6">
             <input type="text" ng-model="organiser" />
-            <button ng-click="filter()">Search</button><br>
+            <button ng-click="filter()">Search</button>
             <button ng-click="discard()">Discard</button><br>
+            <button ng-click="addEvent()">Add Event</button><br>
         </div>
 		</div>
 		<div ng-repeat="event in filterEvents" ng-if="filterEvents.length">
@@ -21,7 +22,9 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-11">
-				<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
+				<div ng-click="getEvent(event.id)">
+					<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
+				</div>
 				<br>
 				<span>&emsp;<p ng-if="event.organiser.length" style="margin-left: 10px"><b><i>by {{event.organiser}}</i></b></p></span>
 			<br>
@@ -35,7 +38,9 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-11">
-				<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
+				<div ng-click="getEvent(event.id)">
+					<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
+				</div>
 				<br>
 				<span>&emsp;<p ng-if="event.organiser.length" style="margin-left: 10px"><b><i>by {{event.organiser}}</i></b></p></span>
 			<br>

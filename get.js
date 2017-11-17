@@ -6,6 +6,7 @@ my_app.controller("MainController", function($scope, $http){
 	$scope.user = {}
 	var info;
 	
+	console.log("ef");
 	
 	$scope.filter = function(){
 		$scope.events.length=0;
@@ -33,6 +34,15 @@ my_app.controller("MainController", function($scope, $http){
 			function(response){
 				console.log(response);
 			});
+	}
+	$scope.getEvent = function(id){
+		console.log(id);
+		sessionStorage.setItem('id', id);
+		window.location.href="individual.html";
+	}
+
+	$scope.addEvent = function(){
+		window.location.href="post.html";
 	}
 	$scope.next = function(){
 		$scope.data++;

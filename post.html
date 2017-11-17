@@ -4,7 +4,7 @@
 		<meta charset = "utf-8" />
 	</head>
 	<body>
-		<application ng-app="my-app" ng-controller="MainController">
+		<application ng-app="my-app" ng-controller="PostController">
 			<h3>Enter Details</h3>
 			<br>
 			<form novalidate>
@@ -21,24 +21,6 @@
     			<br><br>
     			<button class="btn btn-primary"  ng-click="postEvent()">Submit</button>
 			</form>
-			<div ng-if="event">
-				<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-1"></div>
-					<div class="col-md-11">
-						<h3 style="margin-left: 10px">{{event.id}}: {{event.title}}</h3>
-						<br>
-						<p ng-if="event.myCustomProperty.length" style="margin-left: 10px"><b><i>{{event.myCustomProperty}}</i></b></p>
-						<p ng-if="event.price" style="margin-left: 10px"><b><i>{{event.price}}</i></b></p>
-						<br>
-						<span>
-							&emsp;<p ng-if="event.organiser.length" style="margin-left: 10px"><b><i>by {{event.organiser}}</i></b></p>
-							&emsp;<p ng-if="event.date.length" style="margin-left: 10px"><b><i>on {{event.date}}</i></b></p>
-						</span>
-					<br>
-					</div>
-				</div>
-				</div>
 		</application>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="post.js"></script>

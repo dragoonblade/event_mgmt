@@ -1,9 +1,15 @@
 var my_app = angular.module("my-app",[])
-my_app.controller("MainController", function($scope, $http){
+my_app.controller("PostController", function($scope, $http){
 	$scope.user = {title: "Title", date: "November 16, 2017", organiser: "organiser 4", myCustomProperty: "myCustomProperty", price: 1201}
 	var url = "http://eventmanager-server.herokuapp.com/events";
 	var data;
 	
+	$scope.getEvent = function(id){
+		console.log(id);
+		sessionStorage.setItem('id', id);
+		window.location.href="individual.html";
+	}
+
 	$scope.postEvent = function(){
 		$scope.title=$scope.user.title;
 		$scope.date=$scope.user.date;
@@ -19,6 +25,8 @@ my_app.controller("MainController", function($scope, $http){
 		function(response){
 			console.log(response);
 			$scope.event = response.data;
+			sessionStorage.setItem('id', $scope.event.id);
+			window.location.href="individual.html";
 			},
 			function(response){
 				console.log(response);
