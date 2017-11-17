@@ -6,6 +6,3 @@ A system made in AngularJS with the help of APIs in Postman Collection https://w
 ## Motivation
 
 Assignment for Internship
-
-## Demo
-You can find a working demo on Heroku
