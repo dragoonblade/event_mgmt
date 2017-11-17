@@ -6,15 +6,13 @@ my_app.controller("EventController", function($scope, $http){
 	$scope.user = {}
 	var info;
 	
-	$scope.getEvent = function(){
+	$scope.getEvent = function(){		//gets an event
 		$scope.id = parseInt(sessionStorage.getItem('id'));
-		console.log($scope.id);
-		console.log(url+$scope.id+"?_embed=comments");
 		$http.get(url+$scope.id+"?_embed=comments").then(
 			function(response){
 				console.log(response);
 				$scope.event = response.data;
-				console.log($scope.id);
+				//conv date to a more manageable form 
 				for (i = $scope.event.comments.length - 1; i >= 0; i--)				
 					$scope.event.comments[i].createdAt = new Date($scope.event.comments[i].createdAt).toString().slice(4, 21	);
 				
@@ -32,9 +30,7 @@ my_app.controller("EventController", function($scope, $http){
 	$scope.addEvent = function(){
 		window.location.href="post.html";
 	}
-	$scope.reply = function(){
-		console.log($scope.id);
-		console.log($scope.body);
+	$scope.reply = function(){		//commenting
 		info = {"body": $scope.body, "postId": $scope.id}
 		console.log(info);
 		$http.post(url2, info).then(
@@ -52,6 +48,6 @@ my_app.controller("EventController", function($scope, $http){
 		window.location.href="index.html"
 	}
 
-	$scope.getEvent();
+	$scope.getEvent();		//calls function automatically
 
 });

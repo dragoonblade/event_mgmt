@@ -4,8 +4,7 @@ my_app.controller("PostController", function($scope, $http){
 	var url = "http://eventmanager-server.herokuapp.com/events";
 	var data;
 	
-	$scope.getEvent = function(id){
-		console.log(id);
+	$scope.getEvent = function(id){		//loads event after making it
 		sessionStorage.setItem('id', id);
 		window.location.href="individual.html";
 	}
@@ -13,17 +12,19 @@ my_app.controller("PostController", function($scope, $http){
 		window.location.href="index.html";
 	}
 
-	$scope.postEvent = function(){
+	$scope.postEvent = function(){		//posts a new event
 		$scope.title=$scope.user.title;
 		$scope.date=$scope.user.date;
 		$scope.organiser=$scope.user.organiser;
 		$scope.myCustomProperty=$scope.user.myCustomProperty;
 		$scope.price=$scope.user.price;
+
+		//optional property
 		if ($scope.myCustomProperty.length > 0)
 			data = { "title": $scope.title, "date": $scope.date, "organiser": $scope.organiser, "myCustomProperty": $scope.myCustomProperty, "price": $scope.price }
 		else
 			data = { "title": $scope.title, "date": $scope.date, "organiser": $scope.organiser, "price": $scope.price }
-		console.log(data);
+
 		$http.post(url, data).then(
 		function(response){
 			console.log(response);
