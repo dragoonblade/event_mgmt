@@ -27,7 +27,7 @@
 		    </div>
     	</nav>
 
-		<br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br>
 
 		<div class="container-fluid">
 			<div class="row">
@@ -39,10 +39,10 @@
 					            <input class="form-control" id="search" type="text" placeholder="Type here" ng-model="organiser" />
 					        </div>
 							<div class="col-md-4">
-					            <a class="form-control btn-primary btn" ng-click="filter()">Search</a>
+					            <input class="form-control btn-primary btn" id="submit" ng-click="filter()" value="Search"/>
 					        </div>
 							<div class="col-md-4">
-					            <a class="form-control btn-primary btn" ng-click="discard()">Discard Filter</a>
+					            <input class="form-control btn-danger btn" id="submit" ng-click="discard()" value="Discard Filter"/>
 					        </div>
 				        </div>
 					</div>
@@ -104,13 +104,13 @@
 					<div class="col-md-11">
 						<div class="form-group row">
 							<div class="col-md-4">
-								<a class="form-control btn-primary btn" ng-click="next()">Next</a>
+								<input class="form-control btn-primary btn" id="submit" ng-click="next()" value="Next"/>
 							</div>
 							<div class="col-md-4">
-							    <a class="form-control btn-success btn" ng-click="addEvent()">Add Event</a>
+							    <input class="form-control btn-success btn" id="submit" ng-click="addEvent()" value="Add Event"/>
 							</div>
 							<div class="col-md-4">
-								<a class="form-control btn-primary btn" ng-click="back()" ng-if="data>1">Back</a> 
+								<input class="form-control btn-primary btn" id="submit" ng-click="back()" ng-if="data>1" value="Back"/>
 							</div>
 						</div>
 					</div>
