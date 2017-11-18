@@ -15,8 +15,8 @@ Each page has a footer and navigation bar. Navigation bar contains Title and log
 
 ## Screenshots
 
-![Index Page](screenshots/filename.png "All events 3 in a Page")
+![Index Page](screenshots/index.png "All events 3 in a Page")
 
-![Event Page](screenshots/filename.png "Individual Event with comments")
+![Event Page](screenshots/event.png "Individual Event with comments")
 
-![Add Page](screenshots/filename.png "Add Event")
+![Add Page](screenshots/post.png "Add Event")
