@@ -9,7 +9,7 @@ my_app.controller("PostController", function($scope, $http){
 		window.location.href="individual.html";
 	}
 	$scope.home = function(){
-		window.location.href="index.html";
+		window.location.href="index.php";
 	}
 
 	$scope.postEvent = function(){		//posts a new event
