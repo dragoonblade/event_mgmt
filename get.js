@@ -37,7 +37,7 @@ my_app.controller("MainController", function($scope, $http){
 	}
 
 	$scope.home = function(){
-		window.location.href="index.html";
+		window.location.href="index.php";
 	}
 
 	$scope.addEvent = function(){

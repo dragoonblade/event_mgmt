@@ -23,7 +23,7 @@ my_app.controller("EventController", function($scope, $http){
 		);
 	}
 	$scope.home = function(){
-		window.location.href="index.html";
+		window.location.href="index.php";
 	}
 
 
@@ -46,7 +46,7 @@ my_app.controller("EventController", function($scope, $http){
 
 
 	$scope.back = function(){
-		window.location.href="index.html"
+		window.location.href="index.php"
 	}
 
 	$scope.getEvent();		//calls function automatically
