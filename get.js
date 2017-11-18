@@ -1,7 +1,7 @@
 var my_app = angular.module("my-app",[])
 my_app.controller("MainController", function($scope, $http){
-	var url = "http://eventmanager-server.herokuapp.com/events?_page=";
-	var url4= "http://eventmanager-server.herokuapp.com/events?organiser=";
+	var url = "https://eventmanager-server.herokuapp.com/events?_page=";
+	var url4= "https://eventmanager-server.herokuapp.com/events?organiser=";
 	$scope.user = {}	// initializing memory
 	var info;			// initializing memory
 	

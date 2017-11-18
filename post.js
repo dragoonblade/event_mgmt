@@ -1,7 +1,7 @@
 var my_app = angular.module("my-app",[])
 my_app.controller("PostController", function($scope, $http){
 	$scope.user = {}
-	var url = "http://eventmanager-server.herokuapp.com/events";
+	var url = "https://eventmanager-server.herokuapp.com/events";
 	var data;
 	
 	$scope.getEvent = function(id){		//loads event after making it

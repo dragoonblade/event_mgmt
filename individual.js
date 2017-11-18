@@ -1,7 +1,7 @@
 var my_app = angular.module("my-app",[])
 my_app.controller("EventController", function($scope, $http){
-	var url = "http://eventmanager-server.herokuapp.com/events/";
-	var url2= "http://eventmanager-server.herokuapp.com/comments";
+	var url = "https://eventmanager-server.herokuapp.com/events/";
+	var url2= "https://eventmanager-server.herokuapp.com/comments";
 	$scope.data;
 	$scope.user = {}
 	var info;
