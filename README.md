@@ -13,6 +13,9 @@ Each event has an option to see event which shows individual event on a page wit
 Index page also has an option to add an event which takes us to a new page with inputs for all fields including myCustomProperty which is optional. On submitting the event the page changes to individual event page for the new event.
 Each page has a footer and navigation bar. Navigation bar contains Title and logo (links to index page) and Add Event and All Events.
 
+## Deplyoment
+On Heroku https://basic-account.herokuapp.com/
+
 ## Screenshots
 
 ![Index Page](screenshots/index.png "All events 3 in a Page")
