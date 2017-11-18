@@ -46,11 +46,9 @@
 								Date: {{event.date}}<br>
 								<div ng-if="event.myCustomProperty.length > 0">Speciality: {{event.myCustomProperty}}</div>
 								<br>
+				                Price: &#x20b9; {{event.price}} <br/><br/>
 							</div>
 							<div class="col-md-3">
-								<br>
-				                Price: &#x20b9; {{event.price}} <br/><br/>
-				                <a class="btn btn-primary" ng-click="getEvent(event.id)">See Event</a><br/>
 							</div>
 							<hr>
 						</div>
@@ -82,7 +80,7 @@
 								<input class="form-control" id="search" type="text" placeholder="Type here" ng-model="body">
 							</div>
 							<div class="col-md-2">
-								<input class="form-control btn-primary btn" id="submit" ng-click="reply()" value="Comment"/>
+								<a class="form-control btn-primary btn" ng-click="reply()">Comment</a>
 							</div>
 						</div>
 					</div>
@@ -93,7 +91,7 @@
 				<div class="row">
 					<div class="col-md-8"></div>
 					<div class="col-md-4">
-						<input class="form-control btn-primary btn" id="submit" ng-click="back()" value="Return"/>
+						<a class="form-control btn-primary btn" ng-click="back()">Return</a>
 					</div>
 				</div>
 			</div>

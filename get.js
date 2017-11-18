@@ -4,6 +4,7 @@ my_app.controller("MainController", function($scope, $http){
 	var url4= "https://eventmanager-server.herokuapp.com/events?organiser=";
 	$scope.user = {}	// initializing memory
 	var info;			// initializing memory
+	$scope.data = 1;	// initializing page
 	
 	$scope.filter = function(){		//filter acc to organizer
 		$scope.events.length=0;
@@ -18,6 +19,7 @@ my_app.controller("MainController", function($scope, $http){
 	}
 
 	$scope.getEvents = function(){		//gets events in pages with limit 3
+		console.log(url+$scope.data+"&_limit=3");
 		$http.get(url+$scope.data+"&_limit=3").then(
 		function(response){
 			console.log(response);

@@ -39,10 +39,10 @@
 					            <input class="form-control" id="search" type="text" placeholder="Type here" ng-model="organiser" />
 					        </div>
 							<div class="col-md-4">
-					            <input class="form-control btn-primary btn" id="submit" ng-click="filter()" value="Search"/>
+					            <a class="form-control btn-primary btn" ng-click="filter()">Search</a>
 					        </div>
 							<div class="col-md-4">
-					            <input class="form-control btn-danger btn" id="submit" ng-click="discard()" value="Discard Filter"/>
+					            <a class="form-control btn-primary btn" ng-click="discard()">Discard Filter</a>
 					        </div>
 				        </div>
 					</div>
@@ -104,13 +104,13 @@
 					<div class="col-md-11">
 						<div class="form-group row">
 							<div class="col-md-4">
-								<input class="form-control btn-primary btn" id="submit" ng-click="next()" value="Next"/>
+								<a class="form-control btn-primary btn" ng-click="next()">Next</a>
 							</div>
 							<div class="col-md-4">
-							    <input class="form-control btn-success btn" id="submit" ng-click="addEvent()" value="Add Event"/>
+							    <a class="form-control btn-success btn" ng-click="addEvent()">Add Event</a>
 							</div>
 							<div class="col-md-4">
-								<input class="form-control btn-primary btn" id="submit" ng-click="back()" ng-if="data>1" value="Back"/>
+								<a class="form-control btn-primary btn" ng-click="back()" ng-if="data>1">Back</a> 
 							</div>
 						</div>
 					</div>
