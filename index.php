@@ -104,7 +104,7 @@
 					<div class="col-md-11">
 						<div class="form-group row">
 							<div class="col-md-4">
-								<a class="form-control btn-primary btn" ng-click="next()" ng-if="!filterEvents.length">Next</a>
+								<a class="form-control btn-primary btn" ng-click="next()" ng-if="filterEvents.length<1">Next</a>
 							</div>
 							<div class="col-md-4">
 							    <a class="form-control btn-success btn" ng-click="addEvent()">Add Event</a>
