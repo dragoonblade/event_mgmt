@@ -16,6 +16,9 @@ Assignment for Internship
 ## Deplyoment
 On [Heroku](https://basic-account.herokuapp.com/)
 
+## Deplyoment
+On Heroku https://basic-account.herokuapp.com/
+
 ## Screenshots
 
 ![Index Page](screenshots/index.png "All events 3 in a Page")

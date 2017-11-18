@@ -32,6 +32,7 @@ my_app.controller("EventController", function($scope, $http){
 	}
 	$scope.reply = function(){		//commenting
 		info = {"body": $scope.body, "postId": $scope.id}
+		$scope.body = "";
 		console.log(info);
 		$http.post(url2, info).then(
 		function(response){
