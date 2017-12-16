@@ -8,6 +8,7 @@ my_app.controller("PostController", function($scope, $http){
 		sessionStorage.setItem('id', id);
 		window.location.href="individual.html";
 	}
+	
 	$scope.home = function(){
 		window.location.href="index.php";
 	}
