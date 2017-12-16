@@ -43,17 +43,14 @@ my_app.controller("MainController", function($scope, $http){
 	$scope.addEvent = function(){
 		window.location.href="post.html";
 	}
-	
 	$scope.next = function(){		//next page
 		$scope.data++;
 		$scope.getEvents();
 	}
-
 	$scope.back = function(){		//prev page
 		$scope.data--;
 		$scope.getEvents();
 	}
-
 	$scope.discard = function(){
 		$scope.data = 1;
 		$scope.getEvents();

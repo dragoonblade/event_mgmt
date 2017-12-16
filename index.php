@@ -8,7 +8,7 @@
 	    <link rel="stylesheet" href="main.css">   
     	<link rel="stylesheet" href="build.css">   
 	</head>
-	<body style="background-color: #455a64">
+	<body style="background-color: #e0e0e0">
 	<application ng-app="my-app" ng-controller="MainController">
 		<nav class="nav navbar-fixed-top">
       		<div class="container-fluid">
@@ -50,7 +50,7 @@
 					<br><br>
 
 					<div class="container" ng-repeat="event in filterEvents" ng-if="filterEvents.length">
-						<div class="row green">
+						<div class="row" style="border: 1px solid #ccc; background-color: #fff">
 							<div class="col-md-2">
                 				<img src="event.png">
                 			</div>
