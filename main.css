@@ -1,14 +1,18 @@
 
 .fot {
-	background-color: #909090;
+	background-color: #263238;
 	color: #f4f4f4;
     float:left;
     width:109%;
     margin-left:-5%;
 }
 
+.green {
+	background-color: #fff;
+}
+
 .fots {
-	background-color: #f4f4f4;
+	background-color: #263238;
 	color: #000;
 	margin-top: 60px;
     float:left;
@@ -32,13 +36,7 @@
 }
 
 .nav {
-	background-color: #0C3E7D;
-	color: #ffffff;
-}
-
-
-.nav {
-	background-color: #0C3E7D;
+	background-color: #004D40;
 	color: #ffffff;
 }
 
@@ -105,133 +103,9 @@ summary {
 	cursor:pointer; 
 	margin:auto -1em;
 }
-
-.booked {
-	color: #64dd17;
-	font-size: 17px;
-}
-
-.rating {
-	color: #bb0; 
-}
-
-.modal-wrap {
-	background: rgba(20,20,20,.9); 
-	position: fixed; 
-	top: 0; 
-	height:100%; 
-	width:100%; 
-	margin:auto;
-}
-
-.modal-box {
-	margin:20vh auto 0;
-	padding: 5px;
-	width:89vw;
-	background:#fff;
-	border: solid 2px #000;
-	box-shadow: 0 0 5px #aff;
-}
-
-.modal-content{
-	max-height:60vh;
-	height: 400px;
-	width:100%;
-	overflow:scroll;
-}
-
-.close-button{
-	position:absolute;
-	top:0;
-	right:0; 
-	background:#f22; 
-	color:#fff;
-	padding:.25em 1em; 
-	cursor:pointer; 
-	box-shadow: 0 0 5px #f99
-}
 			
 .title {
 	font-weight:bold; 
 	font-size:1.2em; 
 	text-transform:capitalize;
-}
-
-.clinic-name {
-	text-decoration: underline; 
-	font-size:20px;
-}
-.clinic-address {
-	font-style:italic; 
-	color:#666
-	font-size:15px;
-}
-.clinic-address a {
-	font-style:italic; 
-	color:#666
-	font-size:15px;
-}
-.clinic-timing {
-	color:#666
-	font-size:15px;
-}
-.clinic-address {
-	font-style:italic; 
-	color:#666
-	font-size:20px;
-}
-
-
-.patient-name {
-	font-weight:bold; 
-	text-decoration: underline;
-}
-
-.patient-title {
-	font-weight:bold;
-}
-
-.patient-desc {
-	font-style: italic;
-}
-
-.days-menu {
-	height:100%; 
-	width: 100%;
-	text-align:center; 
-	float:left; 
-}
-
-.days-menu-item {
-	padding:10px; 
-	margin-bottom:5px; 
-	height: 50px;
-	background:#888; 
-	color:#fff; 
-	cursor:pointer
-}
-
-.days-menu-item.selected {
-	background:#222;
-}
-
-.appointment-slots {
-	text-align:center;
-	background:#222; 
-	color:#fff; 
-}
-
-.appointment-slots div {
-	margin:5px; 
-	padding:5px;
-}
-
-.slot {
-	background: #0a0; 
-	color: #fff;
-}
-
-.not-slot {
-	background: #a00; 
-	color: #fff;
 }

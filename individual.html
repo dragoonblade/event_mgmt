@@ -7,7 +7,7 @@
 	    <link rel="stylesheet" href="main.css">   
     	<link rel="stylesheet" href="build.css">   
 	</head>
-	<body style="background-color: #e0e0e0">
+	<body style="background-color: #455a64">
 	<application ng-app="my-app" ng-controller="EventController">
 		<nav class="nav navbar-fixed-top">
       		<div class="container-fluid">
@@ -33,7 +33,7 @@
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
 					<div class="container">
-						<div class="row" style="border: 1px solid #ccc; background-color: #fff">
+						<div class="row green">
 							<div class="col-md-2">
                 				<img src="event.png">
                 			</div>
@@ -53,7 +53,7 @@
 							<hr>
 						</div>
 						<br>
-						<div class="row" style="border: 1px solid #ccc; background-color: #fff">
+						<div class="row green">
 							<div ng-if="!event.comments.length">
 								<h4 style="margin: auto; width: 50%; padding: 10px;">No Comments</h4>
 							</div>
@@ -96,8 +96,6 @@
 				</div>
 			</div>
 		</div>
-		<hr>
-
 		<br><br><br>
 		
 		<footer class="fot">
