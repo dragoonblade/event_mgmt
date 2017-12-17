@@ -36,7 +36,7 @@
 					<div class="container-fluid">
 						<div class="form-group row">
 							<div class="col-md-4">
-					            <input class="form-control" id="search" type="text" placeholder="Type here" ng-model="organiser" />
+					            <input class="form-control" id="search" type="text" placeholder="organizer" ng-model="organiser" />
 					        </div>
 							<div class="col-md-4">
 					            <a class="form-control btn-primary btn" ng-click="filter()">Search</a>
@@ -138,7 +138,7 @@
 	</application>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
-	<script src="get.js"></script>
+	<script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
