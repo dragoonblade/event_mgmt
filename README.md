@@ -21,5 +21,6 @@ On [Heroku](https://basic-account.herokuapp.com/)
 
 ![Index Page](screenshots/index.jpg "All events 3 in a Page")
 
+![Event Page](screenshots/event.jpg "Individual event with Comments")
 
 ![Add Page](screenshots/post.jpg "Add Event")
