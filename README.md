@@ -19,8 +19,8 @@ On [Heroku](https://basic-account.herokuapp.com/)
 
 ## Screenshots
 
-![Index Page](screenshots/index.png "All events 3 in a Page")
+![Index Page](screenshots/index.jpg "All events 3 in a Page")
 
-![Event Page](screenshots/event.png "Individual Event with comments")
+![Event Page](screenshots/event.jpg "Individual Event with comments")
 
-![Add Page](screenshots/post.png "Add Event")
+![Add Page](screenshots/post.jpg "Add Event")
