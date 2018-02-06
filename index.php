@@ -11,7 +11,7 @@
 	</head>
 	<body style="background-color: #e0e0e0">
 	<application ng-app="my-app" ng-controller="MainController">
-		<nav class="nav navbar-fixed-top">
+		<nav class="nav navbar-fixed-top" style="background-color: #0d47a1">
       			<div class="container-fluid">
         			<ul class="pull-left in">
 		         		<li ng-click="home()"><h3><img src="logo.png" alt="logo">&emsp;Online Event Management System</h3></li>
@@ -121,7 +121,7 @@
 
 		<br><br><br>
 
-		<footer class="fot">
+		<footer class="fot"  style="background-color: #9e9e9e">
 	      <div class="container-fluid">
 	        <br>
 	        <ul class="pull-left in">
