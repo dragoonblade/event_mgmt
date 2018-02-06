@@ -2,11 +2,12 @@
 <!Doctype html>
 <html>
 	<head>
+		<title>Event Management</title>
 		<meta charset = "utf-8" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	    <link rel="stylesheet" href="main.css">   
-    	<link rel="stylesheet" href="build.css">   
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    	<link rel="stylesheet" href="main.css">   
+    		<link rel="stylesheet" href="build.css">   
 	</head>
 	<body style="background-color: #e0e0e0">
 	<application ng-app="my-app" ng-controller="MainController">
