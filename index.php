@@ -8,24 +8,24 @@
 	    <link rel="stylesheet" href="main.css">   
     	<link rel="stylesheet" href="build.css">   
 	</head>
-	<body style="background-color: #455a64">
+	<body style="background-color: #e0e0e0">
 	<application ng-app="my-app" ng-controller="MainController">
 		<nav class="nav navbar-fixed-top">
-      		<div class="container-fluid">
-        		<ul class="pull-left in">
-		         	 <li ng-click="home()"><h3><img src="logo.png" alt="logo">&emsp;Online Event Management System</h3></li>
-		        </ul>
-		        <ul class="pull-right in">
-		          	<li ng-click="addEvent()"><h3>	Add Event</h3></li>
-		        </ul>
-		        <ul class="pull-right in">
-		        	<li ng-click="addEvent()">&emsp;&emsp;</li>	
-		        </ul>
-		        <ul class="pull-right in">
-		         	<li ng-click="home()"><h3>All Events</h3></li>
-		        </ul>
+      			<div class="container-fluid">
+        			<ul class="pull-left in">
+		         		<li ng-click="home()"><h3><img src="logo.png" alt="logo">&emsp;Online Event Management System</h3></li>
+		        	</ul>
+		        	<ul class="pull-right in">
+		          		<li ng-click="addEvent()"><h3>	Add Event</h3></li>
+		        	</ul>
+		        	<ul class="pull-right in">
+		        		<li ng-click="addEvent()">&emsp;&emsp;</li>	
+		        	</ul>
+		        	<ul class="pull-right in">
+		         		<li ng-click="home()"><h3>All Events</h3></li>
+		        	</ul>
 		    </div>
-    	</nav>
+    		</nav>
 
 		<br><br><br><br><br><br><br><br><br>
 
